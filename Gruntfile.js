@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         //This task execute specific task when specific files change
         watch: {
             scripts: {
-                files: ['::/src/js/*.js'],
+                files: ['../src/js/*.js'],
                 tasks: ['buildjs'],
                 options: {
                     spawn: false,
