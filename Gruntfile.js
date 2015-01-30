@@ -31,14 +31,13 @@ module.exports = function(grunt) {
             }
         }, 
 
-        sass: {
+        compass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    outputStyle: 'compressed', 
+                    sassDir: '../src/sass/', 
+                    cssDir: '../src/css/'
                 },
-                files: {
-                    '../src/css/global.css': '../src/sass/global.scss'
-                }
             } 
         }, 
 
@@ -78,7 +77,7 @@ module.exports = function(grunt) {
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -89,7 +88,7 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('buildjs', ['concat', 'uglify']);
-    grunt.registerTask('buildcss', ['sass', 'autoprefixer']);
+    grunt.registerTask('buildcss', ['compass', 'autoprefixer']);
     grunt.registerTask('buildimg', ['imagemin']);
 
 
