@@ -71,7 +71,15 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                 }
-            } 
+            },  
+
+            img: {
+                files: ['../src/img/*.{png,jpg,gif}'],
+                tasks: ['buildimg'],
+                options: {
+                    spawn: false,
+                }
+            }
         }
 
     });
