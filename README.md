@@ -23,7 +23,14 @@ For building scss and minify javascript all the time they change. In another ter
 
 	python -m SimpleHTTPServer 
 
-For launching a localserver for testing
+For launching a localserver for testing. 
+
+Alternatively is possible to make use of LiveReload, a tool for real-time reloading web pages while editing. My solution make use of (python live reload)[https://github.com/lepture/python-livereload] and (LiveReload browser extension)[http://livereload.com/]. Once everything is setup run on a terminal
+		
+		livereload 
+
+and on a browser tab, with the LiveReload plugin active, type http://localhost:35729/ on the address bar. 
+
 
 
 Release
