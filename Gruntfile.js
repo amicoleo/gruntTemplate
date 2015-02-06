@@ -8,17 +8,35 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '../src/js/libs/*.js', // All JS in the libs folder
-                    '../src/js/global.js'  // This specific file
+                    '../src/js/*.js'  // All my JS files
                 ],
                 dest: '../js/production.js'
             }
         }, 
         uglify: {
-            build: {
+            dist: {
                 src: '../js/production.js',
                 dest: '../js/production.min.js'
             }
         }, 
+
+        jshint: {
+            options: {
+                curly: true,
+                eqeqeq: true,
+                eqnull: true,
+                browser: true,
+                unused: true, 
+                undef: true, 
+                jquery: true,
+                devel: true,
+            },
+            production: {
+                devel: false, 
+            }, 
+            all: ['../src/js/global2.js']
+          }, 
+
 
         imagemin: {
             dynamic: {
@@ -54,6 +72,8 @@ module.exports = function(grunt) {
               dest: '../css/global.css'
             },
         }, 
+
+
 
         //This task execute specific task when specific files change
         watch: {
@@ -92,14 +112,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch'); 
     grunt.loadNpmTasks('grunt-contrib-clean'); 
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('buildjs', ['concat', 'uglify']);
+    grunt.registerTask('buildjs', ['jshint', 'concat', 'uglify']);
+    grunt.registerTask('productionjs', ['jshint:production', 'concat', 'uglify']);
     grunt.registerTask('buildcss', ['compass', 'autoprefixer']);
     grunt.registerTask('buildimg', ['imagemin']);
 
 
-    grunt.registerTask('default', ['buildjs', 'buildcss', 'buildimg']);
+    grunt.registerTask('default', ['productionjs', 'buildcss', 'buildimg']);
 
 };
