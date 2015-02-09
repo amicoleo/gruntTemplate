@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '../src/js/libs/*.js', // All JS in the libs folder
-                    '../src/js/*.js'  // All my JS files
+                    '../src/js/global.js'  // All my JS files
                 ],
                 dest: '../js/production.js'
             }
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             production: {
                 devel: false, 
             }, 
-            all: ['../src/js/global2.js']
+            all: ['../src/js/global.js']
           }, 
 
 
