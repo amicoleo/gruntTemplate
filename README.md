@@ -4,7 +4,7 @@ How to use
 
 The template should be used as a git submodule inside a static website repo. When inside the root folder of the project you wish to add the grunt template
 
-	git submodule add https://amicoleo@bitbucket.org/amicoleo/grunt_basic-template.git grunt
+	git submodule add https://github.com/amicoleo/gruntTemplate.git grunt
 
 After adding the submodule, cd into ROOT/grunt and run
 	
