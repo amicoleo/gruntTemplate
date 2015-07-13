@@ -1,6 +1,10 @@
-How to use
-========
+Grunt configuration files for performing a set of useful tasks for developing front end. 
 
+I often host static websites on Github, and I find handy to use this as a submodule for the website repositories. 
+
+
+Setup
+------
 
 The template should be used as a git submodule inside a static website repo. When inside the root folder of the project you wish to add the grunt template
 
@@ -11,6 +15,10 @@ After adding the submodule, cd into ROOT/grunt and run
 	npm install 
 
 for installing the grunt packages. 
+
+The Gruntfile is written with a specific folder structure in mind, which together with instructions on how to use this module, is available at https://github.com/amicoleo/gruntTemplate-skeleton 
+
+
 
 Developement
 -------
