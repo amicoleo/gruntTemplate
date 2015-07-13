@@ -6,17 +6,23 @@ I often host static websites on Github, and I find handy to use this as a submod
 Setup
 ------
 
-The template should be used as a git submodule inside a static website repo. When inside the root folder of the project you wish to add the grunt template
+The Gruntfile is written with a specific folder structure in mind, which is available at https://github.com/amicoleo/gruntTemplate-skeleton 
 
-	git submodule add https://github.com/amicoleo/gruntTemplate.git grunt
+That repository already contains this as a submodule, so the best way to start is by cloning that recursively 
 
-After adding the submodule, cd into ROOT/grunt and run
+	git clone --recursive https://github.com/amicoleo/gruntTemplate-skeleton NEW_WEBSITE_FOLDER_NAME
+
+And then set a new remote for the repository 
+	
+	git remote set-url origin NEW_REPO_URL
+
+Lastly, cd into ROOT/grunt and run
 	
 	npm install 
 
 for installing the grunt packages. 
 
-The Gruntfile is written with a specific folder structure in mind, which together with instructions on how to use this module, is available at https://github.com/amicoleo/gruntTemplate-skeleton 
+
 
 
 
