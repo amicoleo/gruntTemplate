@@ -29,7 +29,7 @@ for installing the grunt packages.
 Developement
 -------
 
-Run 
+While still in the grunt folder, run 
 	
 	grunt watch 
 
@@ -39,7 +39,7 @@ For building scss and minify javascript all the time they change. In another ter
 
 For launching a localserver for testing. 
 
-Alternatively is possible to make use of LiveReload, a tool for real-time reloading web pages while editing. My solution make use of (python live reload)[https://github.com/lepture/python-livereload] and (LiveReload browser extension)[http://livereload.com/]. Once everything is setup run on a terminal
+Alternatively is possible to make use of LiveReload, a tool for real-time reloading web pages while editing. My solution make use of [python live reload](https://github.com/lepture/python-livereload) and [LiveReload browser extension](http://livereload.com/). Once everything is setup run on a terminal
 		
 		livereload 
 
